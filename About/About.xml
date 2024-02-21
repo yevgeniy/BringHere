@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ModMetaData>
+    <name>BringHere</name>
+    <author>"nimm"</author>
+    <packageId>nimm.bringhere</packageId>
+    <description>"Brings items to a location.  These items will not be hauled back ('f' to clear designator).  If AllowTool is installed will have option to bring urgently."</description>
+    <supportedVersions>
+        <li>1.4</li>
+    </supportedVersions>
+</ModMetaData>
+<!--
+When adding a preview photo
+
+Must be called Preview.png
+
+Should be
+640x360
+
+Must Not Be Larger then 1MB in size
+ -->

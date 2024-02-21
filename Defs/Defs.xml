@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	
+
+	<WorkGiverDef>
+		<defName>BringHere</defName>
+		<label>bring to location</label>
+		<giverClass>UseDontHaul.WorkGiver_BringHere</giverClass>
+		<workType>Hauling</workType>
+		<verb>bring</verb>
+		<gerund>bringing</gerund>
+		<priorityInType>9</priorityInType>
+		
+		<requireCapacities>
+			<li>Manipulation</li>
+		</requireCapacities>
+	</WorkGiverDef>
+	<WorkGiverDef>
+		<defName>BringHereUrgently</defName>
+		<label>bring to location urgently</label>
+		<giverClass>UseDontHaul.WorkGiver_BringHere</giverClass>
+		<workType>HaulingUrgent</workType>
+		<verb>bring</verb>
+		<gerund>bringing</gerund>
+		<priorityInType>50</priorityInType>
+		
+		<requireCapacities>
+			<li>Manipulation</li>
+		</requireCapacities>
+	</WorkGiverDef>
+	
+</Defs>
