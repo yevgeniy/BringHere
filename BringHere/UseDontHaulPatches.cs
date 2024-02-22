@@ -37,7 +37,7 @@ namespace RimWorld
 
         public static bool Prefixer(Thing thing, ref bool __result)
         {
-            Log.Message("IN ALLOW TOOL PREFIXER!");
+
             if (!thing.Spawned)
             {
                 __result = false;
@@ -45,6 +45,7 @@ namespace RimWorld
             }
 
             return true;
+
                 
         }
 
@@ -55,17 +56,50 @@ namespace RimWorld
     [HarmonyPatch(typeof(Thing), "DrawGUIOverlay")]
     public class foobarwas
     {
+        
         public static bool Prefix(Thing __instance)
         {
-            var vect = __instance.Position.ToVector3();
-            vect.x += .5f;
-            vect.z += .5f;
+            
 
             if (BringHereManager.IsDontHaul(__instance))
             {
+                var vect = __instance.Position.ToVector3();
+                vect.x += .5f;
+                vect.z += .5f;
                 GenMapUI.DrawText(new Vector2(vect.x, vect.z), "O", Color.green);
+
+                //var vect2 = vect.MapToUIPosition();
+
+                //var rect = new Rect(vect2, new Vector2(65f, 65f));
+                //Widgets.DrawTextureFitted(rect, BringHereManager.UseDontHaulIcon, .3f);
             }
 
+            
+
+            //Texture badTex = this.icon;
+
+            //if (badTex == null)
+            //{
+            //    badTex = BaseContent.BadTex;
+            //}
+
+
+            //if (!this.disabled || parms.lowLight)
+            //{
+            //    GUI.color = this.IconDrawColor;
+            //}
+            //else
+            //{
+            //    GUI.color = this.IconDrawColor.SaturationChanged(0f);
+            //}
+            //if (parms.lowLight)
+            //{
+            //    GUI.color = GUI.color.ToTransparent(0.6f);
+            //}
+            
+            
+            
+            //GUI.color = Color.white;
             return true;
         }
     }

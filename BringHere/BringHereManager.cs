@@ -13,12 +13,19 @@ using Verse.AI;
 
 namespace BringHere
 {
-  
+    [StaticConstructorOnStartup]
     public class BringHereManager : MapComponent
     {
         #region static
         private static List<BringRequest> bringRequests = new List<BringRequest>();
         private static HashSet<Thing> dontHaulRepository = new HashSet<Thing>();
+        public static Material DontHaulMat;
+        public static Texture2D UseDontHaulIcon;
+
+        [TweakValue("X" )]
+        public static float x = 0f;
+        [TweakValue("Y")]
+        public static float y = 0f;
 
         public static BringItemEntry GetTransferable(BringRequest bringRequest, Thing thing)
         {
@@ -107,6 +114,11 @@ namespace BringHere
 
         #endregion
 
+        static BringHereManager()
+        {
+            UseDontHaulIcon = ContentFinder<Texture2D>.Get("useDontHaul");
+            DontHaulMat= MaterialPool.MatFrom("useDontHaul", ShaderDatabase.MetaOverlay);
+        }
         public BringHereManager(Map map) : base(map)
         {
             

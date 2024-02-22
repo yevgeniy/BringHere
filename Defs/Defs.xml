@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-	
-
 	<WorkGiverDef>
 		<defName>BringHere</defName>
 		<label>bring to location</label>
-		<giverClass>UseDontHaul.WorkGiver_BringHere</giverClass>
+		<giverClass>BringHere.WorkGiver_BringHere</giverClass>
 		<workType>Hauling</workType>
 		<verb>bring</verb>
 		<gerund>bringing</gerund>
@@ -19,7 +17,7 @@
 	<WorkGiverDef>
 		<defName>BringHereUrgently</defName>
 		<label>bring to location urgently</label>
-		<giverClass>UseDontHaul.WorkGiver_BringHere</giverClass>
+		<giverClass>BringHere.WorkGiver_BringHere</giverClass>
 		<workType>HaulingUrgent</workType>
 		<verb>bring</verb>
 		<gerund>bringing</gerund>

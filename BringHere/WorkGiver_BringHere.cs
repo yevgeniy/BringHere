@@ -27,7 +27,7 @@ namespace BringHere
             var requests = pawn.Map.GetComponent<BringHereManager>().GetActiveBringRequests();
             if (def.workType.defName == "BringHereUrgently")
                 return requests.Where(v => v.BringUrgently);
-            
+
             return requests;
         }
 
