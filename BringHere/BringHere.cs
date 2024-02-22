@@ -15,7 +15,7 @@ namespace BringHere
 
         static BringHere()
         {
-            Log.Message("USE DONT HAUL STARTED.");
+            Log.Message("BRING STARTED.");
 
             Harmony.DEBUG = true;  // Enable Harmony Debug
             Harmony harmony = new Harmony("nimm.bringhere");
@@ -25,13 +25,13 @@ namespace BringHere
 
             harmony.PatchAll();
 
-            Log.Message("USE DONT HAUL PATCHED.");
+            Log.Message("BRING PATCHED.");
 
             var assemblies = AppDomain.CurrentDomain.GetAssemblies();
 
             /* find 'haul urgently' class */
             var classType = assemblies.SelectMany(assembly => assembly.GetTypes())
-                    .First(v => v.Name == "Designator_HaulUrgently");
+                    .FirstOrDefault(v => v.Name == "Designator_HaulUrgently");
             if (classType != null)
             {
                 HasAllowTool = true;

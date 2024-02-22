@@ -236,6 +236,7 @@
     <Compile Include="DialogBringItems.cs" />
     <Compile Include="BringRequest.cs" />
     <Compile Include="ItemsTab.cs" />
+    <Compile Include="JobDefOf.cs" />
     <Compile Include="UseDontHaulPatches.cs" />
     <Compile Include="BringHere.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -17,7 +17,6 @@ namespace BringHere
         private static MethodInfo tryFindSpotToPlaceHaulableCloseTo 
             = typeof(HaulAIUtility).GetMethod("TryFindSpotToPlaceHaulableCloseTo", BindingFlags.NonPublic | BindingFlags.Static);
 
-        private static Type jobDefType = typeof(BringDriver);
         private static HashSet<Thing> _neededItems = new HashSet<Thing>();
         public override PathEndMode PathEndMode => PathEndMode.OnCell;
         public override ThingRequest PotentialWorkThingRequest => ThingRequest.ForGroup(ThingRequestGroup.Pawn);
@@ -48,11 +47,7 @@ namespace BringHere
 
                         var haulToSpot = (IntVec3)methparams[3];
 
-                        var jobDef= new JobDef
-                        {
-                            driverClass = jobDefType
-                        };
-                        var job = JobMaker.MakeJob(jobDef, thing, haulToSpot);
+                        var job = JobMaker.MakeJob(JobDefOf.BringHere, thing, haulToSpot);
 
                         job.count = stackCountForJob;
                         job.haulOpportunisticDuplicates = false;
@@ -165,7 +160,7 @@ namespace BringHere
                 if (spawnedPawn == pawn)
                     continue;
 
-                if (spawnedPawn.CurJob!=null && spawnedPawn.CurJob.def.driverClass == jobDefType)
+                if (spawnedPawn.CurJob!=null && spawnedPawn.CurJob.def.driverClass == JobDefOf.BringHere.driverClass)
                 {
                     if (spawnedPawn.jobs.curDriver is BringDriver driver)
                     {

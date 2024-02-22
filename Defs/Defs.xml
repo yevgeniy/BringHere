@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
+	<JobDef>
+		<defName>BringHere</defName>
+		<driverClass>BringHere.BringDriver</driverClass>
+		<reportString>Bringing TargetA to location</reportString>
+	</JobDef>
+	
+
 	<WorkGiverDef>
 		<defName>BringHere</defName>
 		<label>bring to location</label>

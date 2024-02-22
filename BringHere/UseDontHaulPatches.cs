@@ -27,7 +27,7 @@ namespace RimWorld
 
             // Get all types from all assemblies and group them by namespace
             var classType = assemblies.SelectMany(assembly => assembly.GetTypes())
-                    .First(v => v.Name == "Designator_HaulUrgently");
+                    .FirstOrDefault(v => v.Name == "Designator_HaulUrgently");
             if (classType == null)
                 return;
             var meth = classType.GetMethod("ThingIsRelevant", BindingFlags.NonPublic | BindingFlags.Instance);
@@ -68,38 +68,9 @@ namespace RimWorld
                 vect.z += .5f;
                 GenMapUI.DrawText(new Vector2(vect.x, vect.z), "O", Color.green);
 
-                //var vect2 = vect.MapToUIPosition();
-
-                //var rect = new Rect(vect2, new Vector2(65f, 65f));
-                //Widgets.DrawTextureFitted(rect, BringHereManager.UseDontHaulIcon, .3f);
             }
 
-            
 
-            //Texture badTex = this.icon;
-
-            //if (badTex == null)
-            //{
-            //    badTex = BaseContent.BadTex;
-            //}
-
-
-            //if (!this.disabled || parms.lowLight)
-            //{
-            //    GUI.color = this.IconDrawColor;
-            //}
-            //else
-            //{
-            //    GUI.color = this.IconDrawColor.SaturationChanged(0f);
-            //}
-            //if (parms.lowLight)
-            //{
-            //    GUI.color = GUI.color.ToTransparent(0.6f);
-            //}
-            
-            
-            
-            //GUI.color = Color.white;
             return true;
         }
     }
