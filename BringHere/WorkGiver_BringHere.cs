@@ -96,7 +96,8 @@ namespace BringHere
             if (!neededItems.Any())
                 return null;
 
-            Thing result = ClosestHaulable(pawn, ThingRequestGroup.Pawn, neededItems) ?? ClosestHaulable(pawn, ThingRequestGroup.HaulableEver, neededItems);
+            Thing result = ClosestHaulable(pawn, ThingRequestGroup.Pawn, neededItems) 
+                ?? ClosestHaulable(pawn, ThingRequestGroup.HaulableEver, neededItems);
             return result;
             
         }

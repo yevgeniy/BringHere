@@ -15,7 +15,7 @@
 		<workType>Hauling</workType>
 		<verb>bring</verb>
 		<gerund>bringing</gerund>
-		<priorityInType>9</priorityInType>
+		<priorityInType>150</priorityInType>
 		
 		<requireCapacities>
 			<li>Manipulation</li>
@@ -28,7 +28,7 @@
 		<workType>HaulingUrgent</workType>
 		<verb>bring</verb>
 		<gerund>bringing</gerund>
-		<priorityInType>50</priorityInType>
+		<priorityInType>99</priorityInType>
 		
 		<requireCapacities>
 			<li>Manipulation</li>
