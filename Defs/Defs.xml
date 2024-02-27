@@ -17,9 +17,10 @@
 		<gerund>bringing</gerund>
 		<priorityInType>150</priorityInType>
 		
-		<requireCapacities>
+		<requiredCapacities>
 			<li>Manipulation</li>
-		</requireCapacities>
+		</requiredCapacities>
+		
 	</WorkGiverDef>
 	<WorkGiverDef>
 		<defName>BringHereUrgently</defName>
@@ -30,9 +31,10 @@
 		<gerund>bringing</gerund>
 		<priorityInType>99</priorityInType>
 		
-		<requireCapacities>
+		<requiredCapacities>
 			<li>Manipulation</li>
-		</requireCapacities>
+		</requiredCapacities>
+		
 	</WorkGiverDef>
 	
 </Defs>
